@@ -1,26 +1,29 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  /* Colors */
+  --color-canvas: #ffffff;
+  --color-ink: #272727;
+  --color-slate: #5d5d5d;
+  --color-fog: #858585;
+  --color-mist: #e0e0e0;
+  --color-snow: #f6f6f6;
+  --color-iris: #7451f2;
+  --color-signal: #0072c6;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  /* Fonts */
+  --font-heading: var(--font-lustria), serif;
+  --font-sans: var(--font-dm-sans), sans-serif;
+  --font-mono: var(--font-martian-mono), monospace;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  /* Radii — only two values in this design system */
+  --radius-card: 4px;
+  --radius-pill: 100px;
+
+  /* Shadow — exactly one, used only on the primary filled button */
+  --shadow-button: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
 }
